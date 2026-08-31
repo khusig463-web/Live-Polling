@@ -1,0 +1,12 @@
+{
+  "name": "live-polling-quiz",
+  "version": "1.0.0",
+  "description": "Real-time polling and quiz application",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "socket.io": "^4.8.1"
+  }
+}

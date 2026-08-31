@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live Poll - Admin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Live Polling</h1>
+
+    <div id="createSection">
+
+        <input
+            id="question"
+            placeholder="Enter your question"
+        >
+
+        <div id="options">
+            <input class="option" placeholder="Option 1">
+            <input class="option" placeholder="Option 2">
+        </div>
+
+        <button onclick="addOption()">Add Option</button>
+
+        <button onclick="createPoll()">
+            Create Poll
+        </button>
+
+    </div>
+
+
+    <div id="adminSection" class="hidden">
+
+        <h2>Room Code</h2>
+
+        <div id="roomCode" class="room"></div>
+
+        <p>
+            Participants:
+            <span id="participantCount">0</span>
+        </p>
+
+        <button onclick="startPoll()">
+            Begin Voting
+        </button>
+
+        <div id="adminResults"></div>
+
+        <button
+            id="endButton"
+            class="hidden"
+            onclick="endPoll()"
+        >
+            End Poll
+        </button>
+
+    </div>
+
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
+</html>

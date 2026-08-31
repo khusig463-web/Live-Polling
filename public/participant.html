@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Join Poll</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Join Poll</h1>
+
+    <div id="joinSection">
+
+        <input
+            id="roomInput"
+            placeholder="Enter Room Code"
+        >
+
+        <button onclick="joinPoll()">
+            Join
+        </button>
+
+    </div>
+
+
+    <div id="waitingSection" class="hidden">
+
+        <h2>You're in!</h2>
+
+        <p>Waiting for host to start.</p>
+
+    </div>
+
+
+    <div id="voteSection" class="hidden">
+
+        <h2 id="participantQuestion"></h2>
+
+        <div id="voteOptions"></div>
+
+    </div>
+
+
+    <div id="message"></div>
+
+
+    <div id="participantResults" class="hidden">
+
+        <h2>Live Results</h2>
+
+        <div id="results"></div>
+
+    </div>
+
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
